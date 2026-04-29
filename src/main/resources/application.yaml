@@ -1,9 +1,18 @@
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driveClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
 
-spring.jba.database-platform=org.hibernate.dialect.H2Dialect
-spring.jpa.hibernate.d1-auto=update
-spring.h2.console.enabled=true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
 
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: ${PORT:8080}
